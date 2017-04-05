@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:HelloMonkey" 
+    x:Class="HelloMonkey.HelloMonkeyPage"
+    Title="{Binding Title}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" 
+        iOS="0, 20, 0, 0" 
+        Android ="0, 0, 0, 0"
+        WinPhone ="0, 0, 0, 0"  />
+    </ContentPage.Padding>
+    <Grid Padding="0" RowSpacing="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="72" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ListView Grid.Row="0" Grid.Column="0"
+            IsRefreshing="{Binding Loading}" 
+            ItemsSource="{Binding Monkeys}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell 
+                        ImageSource="{Binding AvatarUrl}"
+                        Text="{Binding Name}"
+                        Detail="{Binding MiniBio}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Command="{Binding LoadMonkeysCommand}" 
+            Grid.Row="1" Grid.Column="0" 
+            Text="Buscar" 
+            BackgroundColor="#01579B" TextColor="#FFFF" Margin="16,16" />
+    </Grid>
+</ContentPage>
