@@ -23,14 +23,6 @@ namespace HelloMonkey.ViewModels
             }
         }
 
-        public Developer Developer { get; } = new Developer
-        {
-            Name = "Nome e Sobrenome", // Altere para o seu nome e sobrenome
-            Email = "eu@email.com", // Altere para o seu email
-            City = "Cidade", // Altere para o nome da cidade onde você mora
-            State = "Estado", // Altere para o estado (UF) onde você mora
-        };
-
         public ICommand LoadMonkeysCommand { get; set; }
 
         public HelloMonkeyViewModel() : base("Onde estão os Macacos!?")
@@ -42,9 +34,19 @@ namespace HelloMonkey.ViewModels
                 if (Loading) return;
                 Loading = true;
 
-                var monkeys = await monkeyApi.GiveMeTheMonkeysAsync(Developer);
+                //Altere os dados
+                var developer = new Developer
+                {
+                    Name = "Nome e Sobrenome", // Altere para o seu nome e sobrenome
+                    Email = "eu@email.com", // Altere para o seu email
+                    City = "Cidade", // Altere para o nome da cidade onde você mora
+                    State = "Estado", // Altere para o estado (UF) onde você mora
+                };
+
+                var data = await monkeyApi.GiveMeTheMonkeysAsync(developer);
+
                 Monkeys.Clear();
-                Monkeys.AddRange(monkeys);
+                Monkeys.AddRange(data);
 
                 Loading = false;
             });
