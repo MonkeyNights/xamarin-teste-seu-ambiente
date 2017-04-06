@@ -19,8 +19,7 @@ Abra o arquivo *HelloMonkeyViewModel.cs* localize o método construtor *HelloMon
 
 ![HelloMonkeyViewModel](/images/alterar.png)
 
-Execute o aplicativo e na tela inicial clique no botão Buscar, os seus dados serão enviados para a API que vai retornar uma lista com os Monkeys.
-
+Execute o aplicativo e na tela inicial clique no botão **Buscar**, os seus dados serão enviados para a API que vai retornar uma lista com os Monkeys.
 
 Com essas modificações realizadas e o aplicativo rodando, você já terá um ambiente de desenvolvimento pronto para seguir seus estudos com Xamarin.
 
