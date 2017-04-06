@@ -8,6 +8,8 @@ Aqui você vai encontrar um aplicativo simples criado com **Xamarin.Forms** que 
 ### Como utilizar esse projeto?
 Para começar a utilizar este projeto a forma mais simples é selecionar a opção Download ZIP.
 
+![Download](/images/download.gif)
+
 > Você também pode fazer um fork ou clonar o projeto para o seu ambiente de desenvolvimento.
 
 ### Modificando o projeto Xamarin Forms
