@@ -8,13 +8,14 @@ Aqui você vai encontrar um aplicativo simples criado com **Xamarin.Forms** que 
 ### Como utilizar esse projeto?
 Para começar a utilizar este projeto a forma mais simples é selecionar a opção Download ZIP.
 
+> Você também pode fazer um fork ou clonar o projeto para o seu ambiente de desenvolvimento.
 
-•	Você também pode fazer um fork ou clonar o projeto para o seu ambiente de desenvolvimento.
-
-Modificando o projeto Xamarin Forms
+### Modificando o projeto Xamarin Forms
 Para testar o aplicativo você deve alterar o projeto de Xamarin Forms:
 
-1 - Abra o arquivo *HelloMonkeyViewModel.cs* localize o método construtor *HelloMonkeyViewModel()* e altere as propriedades do modelo *Developer* incluindo os seus dados.
+Abra o arquivo *HelloMonkeyViewModel.cs* localize o método construtor *HelloMonkeyViewModel()* e altere as propriedades do modelo *Developer* incluindo os seus dados.
+
+![HelloMonkeyViewModel](/images/alterar.png)
 
 Execute o aplicativo e na tela inicial clique no botão Buscar, os seus dados serão enviados para a API que vai retornar uma lista com os Monkeys.
 
